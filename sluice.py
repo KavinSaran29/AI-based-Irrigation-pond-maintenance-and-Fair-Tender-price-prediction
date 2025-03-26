@@ -145,7 +145,7 @@ input_data = input_data.join(condition_input)
 with open("lake_model.pkl", "rb") as f:
     loaded_model = pickle.load(f)
 
-if st.sidebar.button("Average Maintenance Cost"):
+if st.sidebar.button("Predict Maintenance Cost"):
     pred_price = loaded_model.predict(input_data)[0]
     
     # Adjust price based on user-defined material cost
